@@ -1,0 +1,111 @@
+.footer {
+  background-color: #310f3d;
+
+  min-height: auto;
+  display: flex;
+  flex-direction: column;
+  @include desktop {
+    min-height: auto;
+  }
+  .logo {
+    width: 2.5rem;
+    margin-bottom: 4.9375rem;
+  }
+  .icon {
+    display: block;
+    width: 2rem;
+  }
+  h3 {
+    margin-bottom: 1.375rem;
+    text-align: center;
+    font-weight: 400;
+    @include desktop {
+      text-align: left;
+    }
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    padding: 7.1875rem 0;
+    @include desktop {
+      width: 95%;
+      max-width: 1300px;
+      margin: 0 auto;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 4rem 0;
+    }
+    .quick-links {
+      .links-list {
+        display: flex;
+        @include desktop {
+          flex-direction: column;
+        }
+        .list-item {
+          text-transform: capitalize;
+          &:not(:last-child) {
+            margin-right: 1em;
+          }
+          @include desktop {
+            &:not(:last-child) {
+              margin-bottom: 0.625rem;
+            }
+          }
+        }
+      }
+      margin-bottom: 4.9375rem;
+    }
+    .contact-list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @include desktop {
+        align-items: flex-start;
+      }
+      .list-item {
+        display: flex;
+        .icon {
+          margin-right: 0.625rem;
+        }
+        &:not(:last-child) {
+          margin-bottom: 0.625rem;
+        }
+      }
+      margin-bottom: 4.9375rem;
+    }
+    .social-media {
+      margin-bottom: 4.9375rem;
+      .social-list {
+        display: flex;
+        justify-content: space-between;
+
+        .list-item {
+          transition: transform 0.5s ease-in-out;
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
+    .scroll-up {
+      transform: rotateZ(180deg);
+      transition: transform 0.5s ease-in-out;
+      &:hover {
+        transform: translateY(-5px) rotateZ(180deg);
+      }
+    }
+  }
+
+  .legal-text {
+    margin-top: auto;
+    color: #fff;
+    background-color: #290d33;
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 400;
+    padding: 1em 0;
+  }
+}
