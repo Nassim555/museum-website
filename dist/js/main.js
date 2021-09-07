@@ -4,11 +4,19 @@ const prv = document.querySelector(".prev"),
   slides = document.querySelectorAll(".slide"),
   dot_container = document.querySelector(".dots"),
   toggle = document.querySelector(".nav-toggle"),
-  navMenu = document.querySelector(".navbar");
+  navMenu = document.querySelector(".navbar"),
+  links = document.querySelectorAll(".nav-item");
 
 toggle.addEventListener("click", () => {
   toggle.classList.toggle("open");
   navMenu.classList.toggle("open");
+  console.log("clicked");
+});
+links.forEach((link) => {
+  link.addEventListener("click", () => {
+    toggle.classList.toggle("open");
+    navMenu.classList.toggle("open");
+  });
 });
 //counters and values
 let currentSlide = 0;
